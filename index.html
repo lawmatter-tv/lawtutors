@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawTutor - Ressources pour étudiants en droit</title>
+    <style>
+        /* Styles de base */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            background-image: url('https://res.cloudinary.com/donkwo18z/image/upload/v1731474119/Couverture_A4_Portfolio_Photo_Vert_20241113_050004_0000_rubbvf.png'); /* Remplacez par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #2196f3;
+            transform: scale(1.1);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-image: url('background-section.jpg'); /* Remplacez par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 1rem auto;
+            outline: none;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        a {
+            text-decoration: none; /* Supprimer le soulignement */
+        }
+
+        button a:hover {
+            color: #2196f3;
+            transform: scale(1.1);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .g-recaptcha {
+            margin: 20px 0;
+        }
+
+        h2 {
+            transform: translateX(-100%);
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Thèmes de couleurs pour chaque section */
+        #cours { background-color: #e4f0f7; border-left: 5px solid #4a90e2; }
+        #bibliotheque { background-color: #e8f5e9; border-left: 5px solid #7cb342; }
+        #entraide { background-color: #fce4ec; border-left: 5px solid #ec407a; }
+        #outils { background-color: #fff3e0; border-left: 5px solid #ff9800; }
+        #actualites { background-color: #f1f8e9; border-left: 5px solid #8bc34a; }
+        #evenements { background-color: #e3f2fd; border-left: 5px solid #2196f3; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur LawTutor</h1>
+        <p>Votre plateforme de ressources pour étudiants en droit</p>
+    </header>
+
+    <main>
+         <!-- Cours et Révisions -->
+        <section id="cours">
+            <h2>Law Matter TV</h2>
+            <p>Chaîne de Diffusion Juridique. Accédez à un vaste programme de quatre chaînes juridiques.</p>
+            <a href="https://lawmatter-tv.github.io/streaming/" target="_blank">
+             <button>Regardez</button>
+      </a>
+       </section>
+
+        <!-- Bibliothèque Numérique -->
+        <section id="bibliotheque">
+            <h2>Bibliothèque Numérique</h2>
+            <p>Consultez des ouvrages de référence, articles et publications en libre accès.</p>
+            <a href="https://www.pdfdrive.com/" target="_blank">
+                <button>Accéder à la bibliothèque numérique</button>
+            </a>
+        </section>
+
+        <!-- Entraide entre étudiants -->
+        <section id="entraide">
+            <h2>Entraide</h2>
+            <p>Échangez avec d'autres étudiants en droit sur le forum ou participez à des groupes de révision.</p>
+            <a href="https://www.campus.fr/forum" target="_blank">
+                <button>Accéder à l'entraide entre étudiants</button>
+            </a>
+        </section>
+        
+        <!-- Cours et Révisions -->
+        <section id="cours">
+            <h2>Cours et Révisions</h2>
+            <p>Accédez aux cours et supports de révision classés par année et par matière.</p>
+            <a href="https://www.fun-mooc.fr/" target="_blank">
+                <button>Voir les cours disponibles</button>
+            </a>
+        </section>
+        
+
+        <!-- Outils pratiques -->
+        <section id="outils">
+            <h2>Outils Pratiques</h2>
+            <p>Accédez à des bases de données de jurisprudence et des fiches pratiques.</p>
+            <a href="https://www.legifrance.gouv.fr/" target="_blank">
+                <button>Accéder aux outils pratiques</button>
+            </a>
+        </section>
+
+        <!-- Actualités juridiques -->
+        <section id="actualites">
+            <h2>Actualités Juridiques</h2>
+            <p>Suivez les dernières évolutions du droit et des changements législatifs récents.</p>
+            <a href="https://www.lemondedudroit.fr/" target="_blank">
+                <button>Voir les actualités juridiques</button>
+            </a>
+        </section>
+
+        <!-- Événements et Conférences -->
+        <section id="evenements">
+            <h2>Événements et Conférences</h2>
+            <p>Consultez le calendrier des événements juridiques et assistez aux conférences.</p>
+            <a href="https://www.unjf.fr/" target="_blank">
+                <button>Voir les événements et conférences</button>
+            </a>
+        </section>
+
+        <!-- Formulaire de contact -->
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form action="mailto:lawmatter8@gmail.com" method="POST" enctype="text/plain">
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LawTutor. Tous droits réservés.</p>
+    </footer>
+</body>
+  </html>
