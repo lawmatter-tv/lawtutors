@@ -22,16 +22,61 @@
             background-size: cover;
             background-position: center;
         }
+        
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 10px;
+            color:#fff
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 0;
         }
+          .icons {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+            margin-top: 1px;
+        }
+
+        .icons a {
+            color: #4a90e2;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        
+    
+        /* Carrousel d'images */
+.carousel {
+    display: flex; /* Aligne les images horizontalement */
+    overflow: hidden; /* Masque les images qui dépassent */
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* Images du carrousel */
+.carousel img {
+    width: 100%;  /* Chaque image occupe la largeur du conteneur */
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+/* Animation de défilement horizontal */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+}
+
+.carousel img {
+    animation: slide 45s infinite; /* Défilement des images toutes les 30 secondes */
+}
 
         nav ul {
             display: flex;
@@ -152,11 +197,35 @@
         #evenements { background-color: #e3f2fd; border-left: 5px solid #2196f3; }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Bienvenue sur LawTutor</h1>
         <p>Votre plateforme de ressources pour étudiants en droit</p>
+        <div class="icons">
+            <a href="https://ecommerce.paydunya.com/artifex-option" target="_blank"><button>Boutique</button></a>
+            <div class="icons">
+            <a href="https://lawmatter-tv.github.io/lawtutors_premium/" target="_blank"><button>S'inscrire</button></a>
+            <a href="#contact"><button>Contact</button> </a>
+        </div>
     </header>
+    </header>
+    
+    <div> <h2> Nouveautés : </h2></div>
+    
+    <!-- Carrousel d'images pour afficher les publicités -->
+    <div class="carousel">
+        <a href="https://ecommerce.paydunya.com/buy/iqlaw365" target="_blank">
+        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550431/The_Ultimate_Blogger_s_Handbook_Cover_20241114_021214_0000_paqoil.png" alt="Publicité 1"></a>
+        
+        <a href="https://ecommerce.paydunya.com/buy/methodologie-juridique" target="_blank">
+        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550465/Blue_Illustrative_Business_Book_Cover__20241114_021042_0000_bl7rgm.png" alt="Publicité 1"></a>
+        
+        <a href="https://ecommerce.paydunya.com/buy/reussir-sa-fac-de-droit" target="_blank">
+        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550466/Réussir_sa_Fac_de_Droit_Stratégies_et_Astuces_pour_Briller_dans_ses_Études_20241114_021133_0000_otllfz.png" alt="Publicité 1"></a>
+        
+    </div>
+    
 
     <main>
          <!-- Cours et Révisions -->
@@ -172,17 +241,8 @@
         <section id="bibliotheque">
             <h2>Bibliothèque Numérique</h2>
             <p>Consultez des ouvrages de référence, articles et publications en libre accès.</p>
-            <a href="https://www.pdfdrive.com/" target="_blank">
+            <a href="https://www.academia.edu/" target="_blank">
                 <button>Accéder à la bibliothèque numérique</button>
-            </a>
-        </section>
-
-        <!-- Entraide entre étudiants -->
-        <section id="entraide">
-            <h2>Entraide</h2>
-            <p>Échangez avec d'autres étudiants en droit sur le forum ou participez à des groupes de révision.</p>
-            <a href="https://www.campus.fr/forum" target="_blank">
-                <button>Accéder à l'entraide entre étudiants</button>
             </a>
         </section>
         
@@ -190,7 +250,7 @@
         <section id="cours">
             <h2>Cours et Révisions</h2>
             <p>Accédez aux cours et supports de révision classés par année et par matière.</p>
-            <a href="https://www.fun-mooc.fr/" target="_blank">
+            <a href="https://www.brioeducation.ca/" target="_blank">
                 <button>Voir les cours disponibles</button>
             </a>
         </section>
@@ -222,6 +282,7 @@
                 <button>Voir les événements et conférences</button>
             </a>
         </section>
+        
 
         <!-- Formulaire de contact -->
         <section id="contact">
@@ -245,4 +306,4 @@
         <p>&copy; 2024 LawTutor. Tous droits réservés.</p>
     </footer>
 </body>
-  </html>
+</html>
