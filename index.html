@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LawTutor - Ressources pour étudiants en droit</title>
+    <title>LawTutor - ressources pour étudiants en droit</title>
     <style>
         /* Styles de base */
         body {
@@ -47,37 +47,24 @@
             text-decoration: none;
         }
         
-    
-        /* Carrousel d'images */
-.carousel {
-    display: flex; /* Aligne les images horizontalement */
-    overflow: hidden; /* Masque les images qui dépassent */
-    max-width: 100%;
-    margin: 20px auto;
-    border-radius: 8px;
-}
+    /* Carrousel d'images */
+        .carousel {
+            position: relative;
+            max-width: 80%;
+            margin: 15px auto;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-/* Images du carrousel */
-.carousel img {
-    width: 100%;  /* Chaque image occupe la largeur du conteneur */
-    height: auto;
-    transition: transform 0.5s ease;
-}
+        .carousel img {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
 
-/* Animation de défilement horizontal */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-100%); }
-    40% { transform: translateX(-200%); }
-    60% { transform: translateX(-300%); }
-    80% { transform: translateX(-400%); }
-    100% { transform: translateX(0); }
-}
-
-.carousel img {
-    animation: slide 45s infinite; /* Défilement des images toutes les 30 secondes */
-}
-
+        .carousel img.active {
+            display: block;
+        }
         nav ul {
             display: flex;
             justify-content: center;
@@ -205,7 +192,7 @@
         <div class="icons">
             <a href="https://ecommerce.paydunya.com/artifex-option" target="_blank"><button>Boutique</button></a>
             <div class="icons">
-            <a href="https://lawmatter-tv.github.io/lawtutors_premium/" target="_blank"><button>S'inscrire</button></a>
+            <a href="premium.html" target="_blank"><button>S'inscrire</button></a>
             <a href="#contact"><button>Contact</button> </a>
         </div>
     </header>
@@ -216,13 +203,13 @@
     <!-- Carrousel d'images pour afficher les publicités -->
     <div class="carousel">
         <a href="https://ecommerce.paydunya.com/buy/iqlaw365" target="_blank">
-        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550431/The_Ultimate_Blogger_s_Handbook_Cover_20241114_021214_0000_paqoil.png" alt="Publicité 1"></a>
+        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550431/The_Ultimate_Blogger_s_Handbook_Cover_20241114_021214_0000_paqoil.png" alt="Publicité 1" class="active"></a>
         
         <a href="https://ecommerce.paydunya.com/buy/methodologie-juridique" target="_blank">
-        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550465/Blue_Illustrative_Business_Book_Cover__20241114_021042_0000_bl7rgm.png" alt="Publicité 1"></a>
+        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550465/Blue_Illustrative_Business_Book_Cover__20241114_021042_0000_bl7rgm.png" alt="Publicité 2"></a>
         
         <a href="https://ecommerce.paydunya.com/buy/reussir-sa-fac-de-droit" target="_blank">
-        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550466/Réussir_sa_Fac_de_Droit_Stratégies_et_Astuces_pour_Briller_dans_ses_Études_20241114_021133_0000_otllfz.png" alt="Publicité 1"></a>
+        <img src="https://res.cloudinary.com/donkwo18z/image/upload/v1731550466/Réussir_sa_Fac_de_Droit_Stratégies_et_Astuces_pour_Briller_dans_ses_Études_20241114_021133_0000_otllfz.png" alt="Publicité 3"></a>
         
     </div>
     
@@ -241,16 +228,16 @@
         <section id="bibliotheque">
             <h2>Bibliothèque Numérique</h2>
             <p>Consultez des ouvrages de référence, articles et publications en libre accès.</p>
-            <a href="https://www.academia.edu/" target="_blank">
+            <a href="bibliotheque.html/" target="_blank">
                 <button>Accéder à la bibliothèque numérique</button>
             </a>
         </section>
         
         <!-- Cours et Révisions -->
         <section id="cours">
-            <h2>Cours et Révisions</h2>
-            <p>Accédez aux cours et supports de révision classés par année et par matière.</p>
-            <a href="https://www.brioeducation.ca/" target="_blank">
+            <h2>Cours et Formations</h2>
+            <p>Accédez aux cours et aux formations.</p>
+            <a href="cours.html" target="_blank">
                 <button>Voir les cours disponibles</button>
             </a>
         </section>
@@ -260,7 +247,7 @@
         <section id="outils">
             <h2>Outils Pratiques</h2>
             <p>Accédez à des bases de données de jurisprudence et des fiches pratiques.</p>
-            <a href="https://www.legifrance.gouv.fr/" target="_blank">
+            <a href="outils.html"/" target="_blank">
                 <button>Accéder aux outils pratiques</button>
             </a>
         </section>
@@ -278,7 +265,7 @@
         <section id="evenements">
             <h2>Événements et Conférences</h2>
             <p>Consultez le calendrier des événements juridiques et assistez aux conférences.</p>
-            <a href="https://www.unjf.fr/" target="_blank">
+            <a href="events.html" target="_blank">
                 <button>Voir les événements et conférences</button>
             </a>
         </section>
@@ -301,6 +288,14 @@
             </form>
         </section>
     </main>
+    <script>let index = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        setInterval(() => {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }, 5000);</script>
 
     <footer>
         <p>&copy; 2024 LawTutor. Tous droits réservés.</p>
